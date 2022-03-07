@@ -4,7 +4,7 @@ const INITIAL_STATE = {
     currentUser: null
 }
 
-const  userReduser = (state = INITIAL_STATE, action) => {
+const userReduser = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case userActionTypes.SET_CURRENT_USER:
             return {
@@ -12,7 +12,9 @@ const  userReduser = (state = INITIAL_STATE, action) => {
                 currentUser: action.payload
             }
 
-        default:   
+
+
+        default:
             return state;
     }
 }
