@@ -4,7 +4,7 @@ import FormInput from '../form-input/form-input'
 import Button, { BUTTON_TYPE } from '../button/button.jsx'
 import './sign-in-form.scss'
 import { collection } from 'firebase/firestore'
-import { UserContext } from '../../context/user.context'
+
 
 const defaultFormFields = {
     email: '',
