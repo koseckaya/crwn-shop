@@ -6,14 +6,17 @@ import { ReactComponent as CrwnLogo } from '../../assets/crown.svg'
 import { selectCartIsOpen } from '../../store/cart/cart.selector'
 import { signOutUser } from '../../utils/firebase/firebase'
 import { NavigationContainer, NavLinks, NavLink, LogoContainer } from './navigation.style'
-import {  useSelector } from 'react-redux'
+import {  useSelector, useDispatch } from 'react-redux'
 import { selectCurrentUser } from '../../store/user/user.selector'
+import { signOutStart } from '../../store/user/user.action'
 
 const Navigation = () => {
+    const dispatch = useDispatch()
+
    const currentUser = useSelector(selectCurrentUser)
   //  const { isCartOpen } = useContext(CartContext)
   const isCartOpen = useSelector(selectCartIsOpen)
-
+    const signOutUser = () => dispatch(signOutStart())
 
     return (
         <Fragment>

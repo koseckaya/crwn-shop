@@ -8,6 +8,8 @@ import { getFirestore, doc, getDoc, setDoc, collection, writeBatch, query, getDo
 
 
 
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyCKeizpOh_EZhZ3XhhFEvKz81M_UH-yRwo",
     authDomain: "crwn-shop-df05c.firebaseapp.com",
@@ -93,3 +95,16 @@ export const signInAuthUserWithEmail = async (email, password) => {
 export const signOutUser = async () => await signOut(auth)
 
 export const onAuthStateChangedListener = (callback) => onAuthStateChanged(auth, callback)
+
+export const getCurrentUser  = () => {
+    return new Promise((resolve, reject) => {
+        const unsubscribe = onAuthStateChanged(
+            auth,
+            (userAuth) => {
+                unsubscribe();
+                resolve(userAuth)
+            },
+            reject
+        )
+    })
+}
