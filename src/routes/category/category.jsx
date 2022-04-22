@@ -1,7 +1,7 @@
 import './category.scss'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import ProductCard from '../../components/product-card/product-card'
 import Spinner from '../../components/spinner/spinner'
 import { selectCategoriesMap, selectCategoriesIsLoading } from '../../store/categories/categories.selector'

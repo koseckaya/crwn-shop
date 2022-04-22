@@ -1,3 +1,4 @@
+import React from 'react'
 import './product-card.scss'
 import Button, { BUTTON_TYPE } from '../button/button'
 

@@ -1,4 +1,4 @@
-import {  useEffect } from "react";
+import React, {  useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { onAuthStateChangedListener, createUserDocumentFromAuth, getCurrentUser } from './utils/firebase/firebase'
 
@@ -8,7 +8,7 @@ import Home from './routes/home/home'
 import Navigation from './routes/navigation/navigation'
 import Shop from './routes/shop/shop'
 import Checkout from './routes/checkout/checkout'
-import Authentication from './components/authentication/authentication'
+import Authentication from './routes/authentication/authentication'
 import { checkUserSession } from "./store/user/user.action";
 
 const App = () => {

@@ -1,5 +1,7 @@
-import './directory.style.scss'
+import './directory.style.jsx'
 import DirectoryItem from '../directory-item/directory-item'
+import { DirectoryContainer} from './directory.style'
+import React from 'react'
 
 const Directory = () => {
 
@@ -36,14 +38,15 @@ const Directory = () => {
     }
   ];
 
-    return (
-        <div className="directory-container">
-        {categories.map(( category ) => (
-          <DirectoryItem key={category.id} category={category} />
-  
-        ))}
-      </div>
-    )
+  return (
+    <DirectoryContainer>
+      {categories.map((category) => {
+      
+        console.log(category, categories);
+        return <DirectoryItem key={category.id} category={category} />
+      })}
+    </DirectoryContainer>
+  )
 }
 
 export default Directory

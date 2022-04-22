@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { createAuthUserWithEmail, createUserDocumentFromAuth } from '../../utils/firebase/firebase'
 import FormInput from '../form-input/form-input'
 import Button, { BUTTON_TYPE} from '../button/button'
